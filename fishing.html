@@ -60,25 +60,36 @@
 <input type = "text" name = "txtTotal" size = "10" value = "0.00">
 <p align = "center">Tender:</p>
 <p align = "center">
-<input type = "text" name = "txtTender" size = "10" value = ""></p>
+<input type = "text" name = "txtTender" size = "10" value = "">
+<p align = "center">Change:</p> 
+<p align = "center">
+<input type = "text" name = "txtChange" size = "10" value = "0.00">
  
 </form>
 
  <script language = "javascript">
   function calcTotal(){
-  var strRod, strBox, strTaga, prRod, prBox, prTaga, strTotal;
+  var strRod, strBox, strTaga, strChange, prRod, prBox, prTaga, prChange,strTender, strTotal, strMinus;
   strRod=document.form.qRod.value;
   strBox=document.form.qBox.value;
   strTaga=document.form.qTaga.value;
+  strChange=document.form.qChange.value; 
+  strTender=document.form.qTender.value; 
   prRod=document.form.txtRod.value;
   prBox=document.form.txtBox.value;
   prTaga=document.form.txtTaga.value;
+  prChange=document.form.txtChange.value;
+  prTender=document.form.txtTender.value;  
    
   strRod=parseInt(strRod)*prRod;
   strBox=parseInt(strBox)*prBox;
   strTaga=parseInt(strTaga)*prTaga;
   strTotal=(strRod+strBox+strTaga);
   document.form.txtTotal.value=strTotal;
+  
+  strMinus=(strTender-strTotal);
+  document.form.txtMinus.value=strMinus; 
+   
   }  
  </script>
  </body>
