@@ -7,7 +7,7 @@
 <h1 align = "center">Fishing Store Order Form</h1>
 <p align = "center">We rent all of our fishing equipment by the week.</p>
 
-<form method = "post" name = "form" action = "javascript:void(0)">
+<form method = "post" name = "form" action = "javascript:void(0);">
 
 <table border = "0" width = "39%" align = "center">
 <tr>
@@ -65,33 +65,46 @@
 <p align = "center">
 <input type = "text" name = "txtChange" size = "10" value = "0.00">
  
-</form>
+<br>
+<br>
+<br>
+ 
+<h3>Choose a color for your background:</h3>
+<form name = "frmColor" action = "javascript:void(0);">
+<input type ="submit" value ="White" name = "bW" onClick = "selectColor('White')"> 
+<input type ="submit" value ="Yellow" name = "bY" onClick = "selectColor('Yellow')">
+<input type ="submit" value ="Fuchsia" name = "bF" onClick = "selectColor('Fuchsia')">
+<input type ="submit" value ="Green" name = "bG" onClick = "selectColor('Green')">
+<input type ="submit" value ="Purple" name = "bP" onClick = "selectColor('Purple')">
+<input type ="submit" value ="Teal" name = "bT" onClick = "selectColor('Teal')"> 
+<input type ="submit" value ="Olive" name = "bO" onClick = "selectColor('Olive')">  
+
+
+ 
 
  <script language = "javascript">
   function calcTotal(){
-  var strRod, strBox, strTaga, strChange, prRod, prBox, prTaga, prChange,strTender, strTotal, strMinus;
+  var strRod, strBox, strTaga, strChange, prRod, prBox, prTaga, strTotal,;
   strRod=document.form.qRod.value;
   strBox=document.form.qBox.value;
   strTaga=document.form.qTaga.value;
-  strChange=document.form.qChange.value; 
-  strTender=document.form.qTender.value; 
+  
   prRod=document.form.txtRod.value;
   prBox=document.form.txtBox.value;
   prTaga=document.form.txtTaga.value;
-  prChange=document.form.txtChange.value;
-  prTender=document.form.txtTender.value;  
+   
    
   strRod=parseInt(strRod)*prRod;
   strBox=parseInt(strBox)*prBox;
   strTaga=parseInt(strTaga)*prTaga;
   strTotal=(strRod+strBox+strTaga);
   document.form.txtTotal.value=strTotal;
-  
-  strMinus=(strTender-strTotal);
-  document.form.txtMinus.value=strMinus; 
-   
-  }  
+    
+  <script language = "javascript">
+  window.defaultStatus="Welcome to Fish Cove" 
+ }  
  </script>
+ </form>
  </body>
  </html>
 
