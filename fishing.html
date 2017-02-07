@@ -14,9 +14,7 @@
 <td width = "48%"><b>Product Name</b></td>
 <td width = "10%"><b>Price</b></td>
 <td width = "43%"><b>Quantity</b></td>
-</tr>
-
-<tr>
+</tr><tr>
 <td width = "48%">1 Fishing Rod &amp; Reel</td>
 <td width = "10%">
 <input type = "text" name = "txtRod" size = "5" value = "7.99"></td>
@@ -28,9 +26,7 @@
 <option values = "3">3</option>
 </select>
 </td>
-</tr>
-
-<tr>
+</tr><tr>
 <td width = "48%">1 Tackle Box</td>
 <td width = "10%">
 <input type = "text" name = "txtBox" size = "5" value = "2.55"></td>
@@ -42,9 +38,7 @@
 <option values = "3">3</option>
 </select>
 </td>
-</tr>
-
-<tr>
+</tr><tr>
 <td width = "48%">1 Taga Box</td>
 <td width = "10%">
 <input type = "text" name = "txtTaga" size = "5" value = "2.55"></td>
@@ -65,9 +59,29 @@
 <p align = "center">
 <input type = "text" name = "txtTotal" size = "10" value = "0.00"></p>
  
- 
 </form>
+
+ <script language = "javascript">
+  function calcTotal(){
+  var strRod, strBox, strTaga, prRod, prBox, prTaga, strTotal;
+  strRod=document.form.qRod.value;
+  strBox=document.form.qBox.value;
+  strTaga=document.form.qTaga.value;
+  prRod=document.form.txtRod.value;
+  prBox=document.form.txtBox.value;
+  prTaga=document.form.txtTaga.value;
+   
+  strRod=parseInt(strRod)*prRod;
+  strBox=parseInt(strBox)*prBox;
+  strTaga=parseInt(strTaga)*prTaga;
+  strTotal=(strRod+strBox+strTaga);
+  document.form.txtTotal.value=strTotal;
+  }  
+ </script>
  </body>
  </html>
+
+ 
+
  
  
